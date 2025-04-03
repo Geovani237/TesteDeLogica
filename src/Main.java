@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -5,15 +6,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Digite um número para saber a soma dos impares dele:");
-    int numero = sc.nextInt();
-    int resultado = 0;
-        for (int i = 0; i <= numero; i++) {
-        if (i % 2 == 1) {
-            resultado = resultado + i;
-        }
-    }
-        System.out.println(resultado);
+
+        System.out.println("Digite um número: ");
+        int numero = sc.nextInt();
+
+        String inverter = Integer.toString(numero); //convertendo Int para String
+        StringBuilder buid = new StringBuilder(inverter);
+        System.out.println(buid.reverse());
 
     }
 }
