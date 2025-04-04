@@ -7,12 +7,18 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Digite um número: ");
-        int numero = sc.nextInt();
+       System.out.println("Digite um número para verificar se ele é um palindromo: ");
+       int numero = sc.nextInt();
 
-        String inverter = Integer.toString(numero); //convertendo Int para String
-        StringBuilder buid = new StringBuilder(inverter);
-        System.out.println(buid.reverse());
+       String numeroStr = String.valueOf(numero);
+       String invertido = new StringBuilder(numeroStr).reverse().toString();
 
+       if (numeroStr.equals(invertido)){
+            System.out.println("Esse número é um palindromo: " + numero);
+       } else {
+           System.out.println("Não é um palindromo");
+       }
+
+        sc.close();//boa prátrica sempre fechar o Scanner
     }
 }
